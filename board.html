@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Whiteboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <h3>🧠 KDR Whiteboard</h3>
+    <span id="user"></span>
+</div>
+
+<div class="toolbar">
+    <input type="color" id="colorPicker">
+    <input type="range" id="penSize" min="1" max="20" value="3">
+
+    <button onclick="setPen()">✏ Pen</button>
+    <button onclick="setEraser()">⬛ Eraser</button>
+
+    <button onclick="addText()">🔤 Text</button>
+    <input type="number" id="textSize" value="24" min="10" max="80">
+
+    <button onclick="undo()">↩ Undo</button>
+    <button onclick="redo()">↪ Redo</button>
+
+    <button onclick="prevPage()">⬅ Prev</button>
+    <button onclick="nextPage()">➡ Next</button>
+
+    <button onclick="clearBoard()">🗑 Clear</button>
+    <button onclick="saveBoard()">💾 Save</button>
+</div>
+
+<canvas id="board" width="1200" height="500"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
